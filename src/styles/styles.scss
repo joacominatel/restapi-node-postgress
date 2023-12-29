@@ -1,0 +1,64 @@
+// Definir colores pasteles y modernos
+$color-fondo: #f9f9f9;
+$color-primario: #ff6b6b;
+$color-secundario: #4ecdc4;
+$color-texto: #333;
+$color-texto-claro: #777;
+
+// Estilo básico para el cuerpo y títulos
+body {
+  background-color: $color-fondo;
+  font-family: 'Arial', sans-serif;
+  color: $color-texto;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: $color-primario;
+}
+
+// Estilos generales para formularios
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid $color-secundario;
+  }
+  button {
+    background: $color-primario;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      background: darken($color-primario, 10%);
+    }
+  }
+}
+
+// Estilos para la lista de usuarios
+#usersList {
+  p {
+    background: $color-secundario;
+    color: $color-texto-claro;
+    padding: 10px;
+    border-radius: 5px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Añadir una pequeña animación a los formularios
+form {
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
